@@ -1,9 +1,16 @@
 <template>
-  <div class="bg-slate-500 h-10 w-10"></div>
+  <div class="flex gap-4">
+    <controls-numbers />
+    <controls-operations />
+  </div>
 </template>
 
 <script>
-export default {};
+import ControlsNumbers from "./ControlsNumbers.vue";
+import ControlsOperations from "./ControlsOperations.vue";
+export default {
+  components: { ControlsOperations, ControlsNumbers },
+};
 </script>
 
 <style></style>

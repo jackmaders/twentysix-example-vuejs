@@ -1,5 +1,5 @@
 <template>
-  <main class="container mx-auto">
+  <main class="container mx-auto my-32">
     <the-calculator />
   </main>
 </template>

@@ -1,15 +1,15 @@
 <template>
-  <calculator-history />
-  <calculator-display />
-  <calculator-controls />
+  <div class="flex flex-col gap-4 mx-auto rounded max-w-fit bg-slate-200 p-4">
+    <calculator-display />
+    <calculator-controls />
+  </div>
 </template>
 
 <script>
 import CalculatorControls from "./CalculatorControls.vue";
 import CalculatorDisplay from "./CalculatorDisplay.vue";
-import CalculatorHistory from "./CalculatorHistory.vue";
 export default {
-  components: { CalculatorDisplay, CalculatorControls, CalculatorHistory },
+  components: { CalculatorDisplay, CalculatorControls },
 };
 </script>
 
