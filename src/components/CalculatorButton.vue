@@ -1,11 +1,31 @@
 <template>
-  <div class="flex justify-center items-center w-16 h-16 rounded bg-slate-400">
+  <button
+    class="flex justify-center items-center h-16 rounded transition-all hover:scale-105"
+    :class="[
+      buttonType === 'number'
+        ? ' col-span-1 w-16 bg-slate-300 hover:bg-slate-400'
+        : '',
+      buttonType === 'operation'
+        ? ' col-span-1 w-16 bg-blue-300 hover:bg-blue-400'
+        : '',
+      buttonType === 'control'
+        ? ' col-span-2 w-36 bg-green-300 hover:bg-green-400'
+        : '',
+      buttonType === 'calculate'
+        ? ' col-span-1 w-16 bg-orange-300 hover:bg-orange-400'
+        : '',
+    ]"
+  >
     <slot />
-  </div>
+  </button>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    buttonType: String,
+  },
+};
 </script>
 
 <style></style>
